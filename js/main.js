@@ -1,5 +1,5 @@
 // 1. Импортируем функцию в освном файле с кодом на кнопки, в переменную, чтобы она работала при клике (через if)
-import { openRecipeBook } from './list-potions.js';
+import { openRecipeBook } from './screen-list-recipe.js';
 import { returnMainMenu } from './return-main-menu.js'
 // потом добавишь: import { showGameHub } from './game-hub.js';
 
