@@ -6,7 +6,7 @@ import { openRecipeBook } from './list-potions.js';
 const listBtn = document.getElementById('list-menu');
 // const startBtn = document.getElementById('start-game');
 
-// 3. Вешаем обработчики, проверяем заполнена ли переменная данными (null или нет). Данный вариант упрощенный и корректный, приравнивается к listBtn === !null
+// 3. Вешаем обработчики, проверяем заполнена ли переменная данными (null или нет). Данный вариант упрощенный и корректный, приравнивается к listBtn !=== null
 if (listBtn) {
     listBtn.addEventListener('click', openRecipeBook);
 }
