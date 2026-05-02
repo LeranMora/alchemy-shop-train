@@ -1,7 +1,7 @@
 export function openRecipeBook() {
   const closeMainMenu = document.getElementById('main-menu-wn');
   if (closeMainMenu) {
-    mainMenu.style.display = 'none';
+    closeMainMenu.style.display = 'none';
   }
   const ingredients = [
     { id: 'rose', name: 'Лепестки роз', price: 7 },
