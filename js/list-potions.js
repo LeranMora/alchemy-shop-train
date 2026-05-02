@@ -1,6 +1,6 @@
 export function openRecipeBook() {
-  const mainMenu = document.getElementById('main-menu-wn');
-  if (mainMenu) {
+  const closeMainMenu = document.getElementById('main-menu-wn');
+  if (closeMainMenu) {
     mainMenu.style.display = 'none';
   }
   const ingredients = [
