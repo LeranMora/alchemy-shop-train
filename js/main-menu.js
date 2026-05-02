@@ -1,6 +1,6 @@
-export function returnMainMenu {
+export function returnMainMenu() {
   const openMainMenu = document.getElementByIf('main-menu-wn');
-  if () {
+  if (openMainMenu) {
     openMainMenu.style.display = 'block';
   }
 }
