@@ -5,9 +5,10 @@ import { openRecipeBook } from './list-potions.js';
 // 2. Находим кнопки в основном файле. Т.к. этот файл подключен к основному .html и все что мы ищем через этот код, мы ищем сразу в этом файле
 const listBtn = document.getElementById('list-menu');
 // const startBtn = document.getElementById('start-game');
-
+const mainMenu = document.getElementById('main-menu-wn');
 // 3. Вешаем обработчики, проверяем заполнена ли переменная данными (null или нет). Данный вариант упрощенный и корректный, приравнивается к listBtn !=== null
 if (listBtn) {
     listBtn.addEventListener('click', openRecipeBook);
+    mainMenu.style.display = 'none';
 }
 // if (startBtn) { startBtn.addEventListener('click', showGameHub); }
