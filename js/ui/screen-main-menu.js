@@ -6,7 +6,7 @@ export function returnMainMenu() {
 }
 
 export function showMainMenu() {
-  const screen = focument.getElementById('screen-main-menu');
+  const screen = document.getElementById('screen-main-menu');
   screen.innerHTML = `
     <h2>Добро пожаловать в "Мандрагору", молодой алхимик!</h2>
     <p>Это место - ваша личная лавка, где вы можете прокачивать свой скилл алхимии и продавать собственные зелья и алхимические субстанции!</p>
