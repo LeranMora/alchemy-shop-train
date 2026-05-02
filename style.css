@@ -45,7 +45,7 @@
         grid-template-columns: 1fr 1fr 1fr;   /* Три колонки под три кнопки */
         grid-template-rows: auto 1fr;         /* Ряд 1: заголовок (auto), Ряд 2: кнопки (1fr) */
         gap: 10px;
-        min-height: 14vw;
+        min-height: 10vw;
 
         }
 
