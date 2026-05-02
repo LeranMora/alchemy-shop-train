@@ -1,5 +1,5 @@
 export function returnMainMenu() {
-  const openMainMenu = document.getElementByIf('main-menu-wn');
+  const openMainMenu = document.getElementById('main-menu-wn');
   if (openMainMenu) {
     openMainMenu.style.display = 'block';
   }
