@@ -60,8 +60,8 @@
         grid-column: 1 / -1;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
+        align-content: start;
         min-height: 7vw;
         padding: 10px;
         justify-items: center;
