@@ -1,8 +1,8 @@
 export function openRecipeBook() {
   const mainMenu = document.getElementById('main-menu-wn');
-   if (mainMenu) {
+  if (mainMenu) {
     mainMenu.style.display = 'none';
-   }
+  }
   const ingredients = [
     { id: 'rose', name: 'Лепестки роз', price: 7 },
     { id: 'moon-dust', name: 'Лунная пыльца', price: 5 },
