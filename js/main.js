@@ -1,6 +1,6 @@
 // 1. Импортируем функцию в освном файле с кодом на кнопки, в переменную, чтобы она работала при клике (через if)
 import { openRecipeBook } from './ui/screen-list-recipe.js';
-import { returnMainMenu } from './return-main-menu.js'
+import { returnMainMenu } from './ui/screen-return-main-menu.js'
 // потом добавишь: import { showGameHub } from './game-hub.js';
 
 // 2. Находим кнопки в основном файле. Т.к. этот файл подключен к основному .html и все что мы ищем через этот код, мы ищем сразу в этом файле
