@@ -9,6 +9,5 @@ const mainMenu = document.getElementById('main-menu-wn');
 // 3. Вешаем обработчики, проверяем заполнена ли переменная данными (null или нет). Данный вариант упрощенный и корректный, приравнивается к listBtn !=== null
 if (listBtn) {
     listBtn.addEventListener('click', openRecipeBook);
-    mainMenu.style.display = 'none';
 }
 // if (startBtn) { startBtn.addEventListener('click', showGameHub); }
