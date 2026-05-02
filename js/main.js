@@ -1,13 +1,13 @@
-// 1. Импорт
-import { showRecipe } from './list-potions.js';
+// 1. Импортируем функцию в освном файле с кодом на кнопки, в переменную, чтобы она работала при клике (через if)
+import { openRecipeBook } from './list-potions.js';
 // потом добавишь: import { showGameHub } from './game-hub.js';
 
-// 2. Находим кнопки
+// 2. Находим кнопки в основном файле. Т.к. этот файл подключен к основному .html и все что мы ищем через этот код, мы ищем сразу в этом файле
 const listBtn = document.getElementById('list-menu');
 // const startBtn = document.getElementById('start-game');
 
-// 3. Вешаем обработчики
+// 3. Вешаем обработчики, проверяем заполнена ли переменная данными (null или нет). Данный вариант упрощенный и корректный, приравнивается к listBtn === !null
 if (listBtn) {
-    listBtn.addEventListener('click', showRecipe);
+    listBtn.addEventListener('click', openRecipeBook);
 }
 // if (startBtn) { startBtn.addEventListener('click', showGameHub); }
