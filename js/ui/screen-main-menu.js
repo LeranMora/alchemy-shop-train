@@ -6,7 +6,9 @@ export function returnMainMenu() {
 }
 
 export function showMainMenu() {
+  console.log('showMainMenu вызвана!');
   const screen = document.getElementById('screen-main-menu');
+  console.log('screen найден:', screen);
   if (screen) {
     screen.innerHTML = `
       <h2>Добро пожаловать в "Мандрагору", молодой алхимик!</h2>
@@ -25,6 +27,8 @@ export function showMainMenu() {
  '-----'
       </pre>
     `;
-  screen.style.display = 'block';
+    
+    screen.style.display = 'block';
+    console.log('Главное меню показано!');
   }
 }
