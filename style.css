@@ -101,11 +101,24 @@
     }
 /**/
 
+    h1, h2, h3, h4, p {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+    }
+
     @media (max-width: 600px) {
         .game-container {
             width: 99vw;
             height: 90vh;
             max-width: none;
             min-width: none;
+        }
+        
+        .header {
+            min-height: 22vw;
+        }
+        
+        .footer {
+            min-height: 10vw;
         }
     }
