@@ -11,7 +11,19 @@ export function showMainMenu() {
     screen.innerHTML = `
       <h2>Добро пожаловать в «Мандрагору», молодой алхимик!</h2>
       <p>Это место - ваша личная лавка, где вы можете прокачивать свой скилл алхимии и продавать собственные зелья и алхимические субстанции!</p>
-      <h3>Удачи в вашем приключении, Алхимик!</h3>`;
+      <input type="text" id="playerNameInput" placeholder="Введи своё имя, Алхимик!"><br>
+      <button id="startGameBtn">Начать приключение</button>
+      <p id="errorMessage" style="color: red; display: none;">Ты не представился, Алхимик! Назови своё имя.</p>
+      `;
     screen.style.display = 'block';
+    const button = document.getElementById('startGameBtn');
+    if (button) {
+        button.addEventListener('click', startGame);
+    }
   }
+}
+
+function startGame() {
+    const input = document.getElementById('playerNameInput');
+    const errorMsg = document.getElementById('errorMessage');
 }
