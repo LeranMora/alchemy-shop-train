@@ -24,6 +24,8 @@ export function showMainMenu() {
 }
 
 function startGame() {
-    const input = document.getElementById('playerNameInput');
+    const input = document.getElementById('playerNameInput');  
     const errorMsg = document.getElementById('errorMessage');
+    if (!input) return;
+    const rawName = input.value.trim();
 }
