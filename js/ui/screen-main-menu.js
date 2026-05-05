@@ -28,4 +28,8 @@ function startGame() {
     const errorMsg = document.getElementById('errorMessage');
     if (!input) return;
     const rawName = input.value.trim();
+    if (rawName === '') {
+        if (errorMsg) errorMsg.style.display = 'block';
+        return;
+    }
 }
