@@ -1,10 +1,3 @@
-export function returnMainMenu() {
-  const openMainMenu = document.getElementById('screen-main-menu');
-  if (openMainMenu) {
-    openMainMenu.style.display = 'block';
-  }
-}
-
 export function showMainMenu() {
   const screen = document.getElementById('screen-main-menu');
   if (screen) {
