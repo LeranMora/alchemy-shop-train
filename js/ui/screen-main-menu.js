@@ -40,5 +40,6 @@ export function returnMainMenu() {
     const openMainMenu = document.getElementById('screen-main-menu');
     if (openMainMenu) {
       openMainMenu.style.display = 'block';
+      errorMsg.style.display = 'none';
     }
 }
