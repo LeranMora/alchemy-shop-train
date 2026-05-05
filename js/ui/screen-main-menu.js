@@ -38,8 +38,11 @@ function startGame() {
 
 export function returnMainMenu() {
     const openMainMenu = document.getElementById('screen-main-menu');
-    if (openMainMenu) {
+    const errorMsg = document.getElementById('errorMessage');
+    const playerInput = document.getElementById('playerNameInput');
+    if (openMainMenu && errorMsg) {
       openMainMenu.style.display = 'block';
       errorMsg.style.display = 'none';
+      playerInput.value = ''; // Очищаем текст внутри поля
     }
 }
