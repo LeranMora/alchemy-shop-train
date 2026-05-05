@@ -33,6 +33,7 @@ function startGame() {
     // Прячем главное меню
     const screen = document.getElementById('screen-main-menu');
     if (screen) screen.style.display = 'none';
+    alert(`Добро пожаловать в Лавку, ${playerName}!`);
 }
 
 export function returnMainMenu() {
