@@ -22,14 +22,29 @@ export function showMainMenu() {
     }
   }
 }
-
+// Эта функция обрабатывает нажатие на кнопку "Начать приключение"
 function startGame() {
     const input = document.getElementById('playerNameInput');  
     const errorMsg = document.getElementById('errorMessage');
     if (!input) return;
     const rawName = input.value.trim();
+    // Проверка на пустое имя
     if (rawName === '') {
         if (errorMsg) errorMsg.style.display = 'block';
         return;
+    }
+    // Делаем первую букву заглавной
+    const playerName = rawName.charAt(0).toUpperCase() + rawName.slice(1).toLowerCase();
+    // Сохраняем имя в глобальный объект
+    window.gameState.playerName = playerName;
+    // Прячем главное меню
+    const screen = document.getElementById('screen-main-menu');
+    if (screen) screen.style.display = 'none';
+}
+
+export function returnMainMenu() {
+    const openMainMenu = document.getElementById('screen-main-menu');
+    if (openMainMenu) {
+      openMainMenu.style.display = 'block';
     }
 }
