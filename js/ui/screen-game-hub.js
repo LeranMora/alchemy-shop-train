@@ -7,9 +7,14 @@ export function openGameHub() {
     <button id="main-menu-btn" class="layout-btn">Главное меню</button>
     `;
     screenHeader.style.display = 'grid';
+    const returnBtn = document.getElementById('main-menu-btn');
+        if (returnBtn) {
+            returnBtn.addEventListener('click', returnMainMenu);
+        }
   }
 }
 export function returnMainMenu() {
+    const screenHeader = document.getElementById('header-game-hub');
     console.log('Функция работает');
     const openMainMenu = document.getElementById('screen-main-menu');
     console.log('Нашли элемент Главного меню');
