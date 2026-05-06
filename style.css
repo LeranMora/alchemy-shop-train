@@ -67,13 +67,6 @@
         gap: 5px;
         border-top: 3px solid black;
     }
-    #inputName {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: 10px;
-    }
 
     .list {
         grid-column: 1 / -1;
@@ -104,6 +97,15 @@
         margin-bottom: 0.2em;
     }
 
+/*Стиль для элемента по ID*/
+    #inputName {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+/**/
     @media (max-width: 600px) {
         .game-container {
             width: 99vw;
