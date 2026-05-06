@@ -1,3 +1,5 @@
+import { openGameHub } from './screen-game-hub.js';
+
 export function showMainMenu() {
   const screen = document.getElementById('screen-main-menu');
   if (screen) {
@@ -34,9 +36,15 @@ function startGame() {
     const playerName = rawName.charAt(0).toUpperCase() + rawName.slice(1).toLowerCase();
     // Сохраняем имя в глобальный объект
     window.gameState.playerName = playerName;
-    // Прячем главное меню
     const screen = document.getElementById('screen-main-menu');
+    const headerScreen = document.getElementById('header-game-hub');
+    const footerScreen = document.getElementById('footer-game-hub');
+        // Прячем главное меню
     if (screen) screen.style.display = 'none';
+    // 
+    if (headerScreen) headerScreen.style.display = 'block';
+    if (footerScreen) footerScreen.style.display = 'block';
+    openGameHub();
     alert(`Добро пожаловать в Лавку, ${playerName}!`);
 }
 
