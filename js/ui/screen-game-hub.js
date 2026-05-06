@@ -13,6 +13,7 @@ export function returnMainMenu() {
     const openMainMenu = document.getElementById('screen-main-menu');
     const errorMsg = document.getElementById('errorMessage');
     const playerInput = document.getElementById('playerNameInput');
+    console.log('Нажали кнопку');
     if (openMainMenu && errorMsg) {
       openMainMenu.style.display = 'block';
       errorMsg.style.display = 'none';
