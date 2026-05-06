@@ -35,5 +35,6 @@ export function returnMainMenu() {
   errorMsg.style.display = 'none';
   playerInput.value = ''; // Очищаем текст внутри поля
   screenHeader.style.display = 'none';
+  screenFooter.style.display = 'none';
 }
 
