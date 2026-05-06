@@ -2,11 +2,15 @@ export function showMainMenu() {
   const screen = document.getElementById('screen-main-menu');
   if (screen) {
     screen.innerHTML = `
-      <h2>Добро пожаловать в «Мандрагору», молодой алхимик!</h2>
-      <p>Это место - ваша личная лавка, где вы можете прокачивать свой скилл алхимии и продавать собственные зелья и алхимические субстанции!</p>
-      <input type="text" id="playerNameInput" placeholder="Введи своё имя, Алхимик!"><br>
-      <button id="startGameBtn" class="game-btn">Начать приключение</button>
-      <p id="errorMessage" style="color: red; display: none;">Ты не представился, Алхимик! Назови своё имя.</p>
+      <div id="greeting">
+        <h2>Добро пожаловать в «Мандрагору», молодой алхимик!</h2>
+        <p>Это место - ваша личная лавка, где вы можете прокачивать свой скилл алхимии и продавать собственные зелья и алхимические субстанции!</p>
+      </div>
+      <div id="inputName">
+        <input type="text" id="playerNameInput" placeholder="Введи своё имя, Алхимик!"><br>
+        <button id="startGameBtn" class="game-btn">Начать приключение</button>
+        <p id="errorMessage" style="color: red; display: none;">Ты не представился, Алхимик! Назови своё имя.</p>
+      </div>
       `;
     screen.style.display = 'block';
     const button = document.getElementById('startGameBtn');
