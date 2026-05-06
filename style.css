@@ -79,21 +79,11 @@
     }
 /**/
     
-/*Стили для кнопок*/
-    .footer .game-btn {
+/*Стили для кнопок*/    
+    .layout-btn {
         width: 100%;
         height: 100%;
         margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .header .game-btn {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-
     /* Текст внутри кнопки — по центру */
         padding: 2px 4px;
         display: flex;
