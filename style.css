@@ -109,9 +109,8 @@ h1, h2, h3, h4, p {
     font-size: 16px;
 }
 #header-game-hub {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 10px;
     width: 100%;
 }
