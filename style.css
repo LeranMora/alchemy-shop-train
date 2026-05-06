@@ -115,6 +115,11 @@ h1, h2, h3, h4, p {
     gap: 10px;
     width: 100%;
 }
+#footer-game-hub {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 /**/
     
 @media (max-width: 600px) {
