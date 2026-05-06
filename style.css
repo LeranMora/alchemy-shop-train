@@ -1,132 +1,136 @@
     /*Сброс стилей для корректного открытия в браузере*/
-    *, *::before, *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
         
-    html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
     /**/
         
     /*Стили для основных блоков*/
-    .game-container {
-        display: grid; /*отображение в виде сетки*/
-        grid-template-columns: 1fr 1fr 1fr; /*размер сетки горизонтально (количество колонок)*/
-        grid-template-rows: auto 1fr auto;
-        gap: 0; /*расстояние между всеми ячейками сетки*/
-        width: 90vw;
-        height: 80vh;
-        max-width: 600px;
-        min-width: 320px;
-
-        box-sizing: border-box; /* паддинг и бордер будут включены внутри установленной ширины и высоты, не покидая ее */
-        border: 3px solid black; /*рамка вокруг контейнера толщина, стиль, цвет*/
+.game-container {
+    display: grid; /*отображение в виде сетки*/
+    grid-template-columns: 1fr 1fr 1fr; /*размер сетки горизонтально (количество колонок)*/
+    grid-template-rows: auto 1fr auto;
+    gap: 0; /*расстояние между всеми ячейками сетки*/
+    width: 90vw;
+    height: 80vh;
+    max-width: 600px;
+    min-width: 320px;
+    box-sizing: border-box; /* паддинг и бордер будут включены внутри установленной ширины и высоты, не покидая ее */
+    border: 3px solid black; /*рамка вокруг контейнера толщина, стиль, цвет*/
         /*    padding: 5px; /*отодвигает содержимое от рамки таблицы внутри*/
-        text-align: center;
-        align-content: start; /*выравнивает строки внутри сетки к верхней части, если позволяет высота*/
-    }
+    text-align: center;
+    align-content: start; /*выравнивает строки внутри сетки к верхней части, если позволяет высота*/
+}
         
-    .header {
-        grid-column: 1 / -1;
-        box-sizing: border-box;
-        border-bottom: 3px solid black;
-        padding: 10px;
+.header {
+    grid-column: 1 / -1;
+    box-sizing: border-box;
+    border-bottom: 3px solid black;
+    padding: 10px;
     /* Мини-грид */
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;   /* Три колонки под три кнопки */
-        grid-template-rows: auto 1fr;         /* Ряд 1: заголовок (auto), Ряд 2: кнопки (1fr) */
-        gap: 10px;
-        min-height: 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;   /* Три колонки под три кнопки */
+    grid-template-rows: auto 1fr;         /* Ряд 1: заголовок (auto), Ряд 2: кнопки (1fr) */
+    gap: 10px;
+    min-height: 10vw;
+}
 
-        }
-
-    .scrollable {
-        grid-column: 1 / -1;
-        overflow-y: auto;
-        box-sizing: border-box;
-        padding: 10px;
-    }
+.scrollable {
+    grid-column: 1 / -1;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
     
-    .footer {
-        display: grid;
-        grid-column: 1 / -1;
-        grid-template-columns: 1fr 1fr 1fr;
-        place-items: center;
-        min-height: 7vw;
-        padding: 10px;
-        justify-items: center;
-        gap: 5px;
-        border-top: 3px solid black;
-    }
+.footer {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    min-height: 7vw;
+    padding: 10px;
+    justify-items: center;
+    gap: 5px;
+    border-top: 3px solid black;
+}
 
-    .list {
-        grid-column: 1 / -1;
-    }
+.list {
+    grid-column: 1 / -1;
+}
     
-    .menu-title {
-        grid-column: 1 / -1;
-        margin: 0;/*отодвигает всю табличку снаружи */
-        text-align: center;
-    }
+.menu-title {
+    grid-column: 1 / -1;
+    margin: 0;/*отодвигает всю табличку снаружи */
+    text-align: center;
+}
 /**/
     
 /*Стили для кнопок*/    
-    .layout-btn {
-        width: 100%;
-        height: 100%;
-        margin: 0;
+.layout-btn {
+    width: 100%;
+    height: 100%;
+    margin: 0;
     /* Текст внутри кнопки — по центру */
-        padding: 2px 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    padding: 2px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /**/
 
-    h1, h2, h3, h4, p {
-        margin-top: 0.2em;
-        margin-bottom: 0.2em;
-    }
+h1, h2, h3, h4, p {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
 
 /*Стиль для элемента по ID*/
-    #inputName {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
+#inputName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+#playerNameInput {
+    width: 40px;
+    hight: 15px;
+}
 /**/
-    @media (max-width: 600px) {
-        .game-container {
-            width: 99vw;
-            height: 90vh;
-            max-width: none;
-            min-width: none;
-        }
-        
-        .header {
-            min-height: 22vw;
-        }
-        
-        .footer {
-            min-height: 10vw;
-        }
+    
+@media (max-width: 600px) {
+    .game-container {
+        width: 99vw;
+        height: 90vh;
+        max-width: none;
+        min-width: none;
     }
+        
+    .header {
+        min-height: 22vw;
+    }
+        
+    .footer {
+        min-height: 10vw;
+    }
+}
 
-    @media (min-width: 601px) {
-         .header {
-             min-height: 80px;
-             max-height: 150px;
-         }
+@media (min-width: 601px) {
+    .header {
+        min-height: 80px;
+        max-height: 150px;
     }
+}
      
