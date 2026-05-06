@@ -14,12 +14,11 @@ export function openGameHub() {
   }
 }
 export function returnMainMenu() {
-    const screenHeader = document.getElementById('header-game-hub');
     const openMainMenu = document.getElementById('screen-main-menu');
     const errorMsg = document.getElementById('errorMessage');
     const playerInput = document.getElementById('playerNameInput');
     console.log('Нашли элемент с вводом имени');
-    if (openMainMenu && errorMsg) {
+    if (openMainMenu && errorMsg && screenHeader) {
       openMainMenu.style.display = 'block';
       errorMsg.style.display = 'none';
       playerInput.value = ''; // Очищаем текст внутри поля
