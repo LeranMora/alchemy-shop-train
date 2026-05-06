@@ -101,8 +101,8 @@ h1, h2, h3, h4, p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   /* gap: 5px; */
-    margin-top: 10px;
+    gap: 5px;
+    /*margin-top: 10px; */
 }
 #playerNameInput {
     width: 300px;
