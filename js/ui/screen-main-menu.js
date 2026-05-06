@@ -7,7 +7,7 @@ export function showMainMenu() {
         <p>Это место - ваша личная лавка, где вы можете прокачивать свой скилл алхимии и продавать собственные зелья и алхимические субстанции!</p>
       </div>
       <div id="inputName">
-        <input type="text" id="playerNameInput" placeholder="Введи своё имя, Алхимик!">
+        <input type="text" id="playerNameInput" placeholder="Введи своё имя, Алхимик!" style="text-align: center;">
         <button id="startGameBtn">Начать приключение</button>
         <p id="errorMessage" style="color: red; display: none;">Ты не представился, Алхимик! Назови своё имя.</p>
       </div>
