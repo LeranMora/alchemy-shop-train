@@ -41,7 +41,7 @@ html, body {
     padding: 10px;
     /* Мини-грид */
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr;   /*Три колонки под три кнопки */
+    grid-template-columns: 1fr 1fr 1fr;   /*Три колонки под три кнопки */
     grid-template-rows: auto 1fr;         /* Ряд 1: заголовок (auto), Ряд 2: кнопки (1fr) */
     gap: 10px;
     min-height: 10vw;
@@ -109,6 +109,7 @@ h1, h2, h3, h4, p {
     font-size: 16px;
 }
 #header-game-hub {
+    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
