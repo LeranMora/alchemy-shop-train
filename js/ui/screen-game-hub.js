@@ -1,5 +1,5 @@
+const screenHeader = document.getElementById('header-game-hub');
 export function openGameHub() {
-  const screenHeader = document.getElementById('header-game-hub');
   if (screenHeader) {
     screenHeader.innerHTML = `
     <button id="save-game" class="layout-btn">Сохранить игру</button>
