@@ -8,7 +8,7 @@ export function showMainMenu() {
       </div>
       <div id="inputName">
         <input type="text" id="playerNameInput" placeholder="Введи своё имя, Алхимик!"><br>
-        <button id="startGameBtn" class="layout-btn">Начать приключение</button>
+        <button id="startGameBtn">Начать приключение</button>
         <p id="errorMessage" style="color: red; display: none;">Ты не представился, Алхимик! Назови своё имя.</p>
       </div>
       `;
