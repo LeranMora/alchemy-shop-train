@@ -6,7 +6,7 @@ export function openGameHub() {
     <button id="load-game" class="layout-btn">Удалить игру</button>
     <button id="main-menu-btn" class="layout-btn">Главное меню</button>
     `;
-    screenHeader.style.display = 'block';
+    screenHeader.style.display = 'grid';
   }
 }
 export function returnMainMenu() {
