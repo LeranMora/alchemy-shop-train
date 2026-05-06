@@ -12,28 +12,15 @@
     <div class="game-container">
         <div class="header">
             <h1 class="menu-title">Лавка алхимика "Мандргора"</h1>
-            <button id="save-game" class="layout-btn" style="display:none">Сохранить игру</button>
-            <button id="load-game" class="layout-btn" style="display:none">Загрузить игру</button>
-            <button id="list-menu" class="layout-btn" style="display:none">Книга рецептов</button>
-            <button id="close" class="layout-btn" style="display:none">Назад</button>
-            <button id="delete-game" class="layout-btn" style="display:none"> Удалить игру</button>
-            <button id="statistics-game" class:"layout-btn" style="display:none">Статистика</button>
+            <div id="header-game-hub" style="display: none;"></div>
         </div>
 
         <div class="scrollable">
             <div id="screen-main-menu" style="display: none;"></div>
         </div>
 
-        <div class="footer"> <!-- style="display:none" в главном меню-->
-            <div>
-                <div> lvl: 0 (0 / 100) <!--peremennaya--></div>
-                <div>Gold: 100</div>
-            </div>
-            <div>
-                <div>Репутация лавки: 0</div>
-                <div>✾ Чистота лавки ✾: 0</div>
-            </div>
-            <button id="main-menu-btn" class="layout-btn">Главное меню</button>
+        <div class="footer">
+            <div id="footer-game-hub"></div>
         </div>
     </div>
     <script type="module" src="js/main.js"></script>
