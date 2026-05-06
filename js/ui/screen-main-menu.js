@@ -47,14 +47,3 @@ function startGame() {
     openGameHub();
     alert(`Добро пожаловать в Лавку, ${playerName}!`);
 }
-
-export function returnMainMenu() {
-    const openMainMenu = document.getElementById('screen-main-menu');
-    const errorMsg = document.getElementById('errorMessage');
-    const playerInput = document.getElementById('playerNameInput');
-    if (openMainMenu && errorMsg) {
-      openMainMenu.style.display = 'block';
-      errorMsg.style.display = 'none';
-      playerInput.value = ''; // Очищаем текст внутри поля
-    }
-}
