@@ -10,10 +10,13 @@ export function openGameHub() {
   }
 }
 export function returnMainMenu() {
+    console.log('Функция работает');
     const openMainMenu = document.getElementById('screen-main-menu');
+    console.log('Нашли элемент Главного меню');
     const errorMsg = document.getElementById('errorMessage');
+    console.log('Нашли Элемент с ошибкой');
     const playerInput = document.getElementById('playerNameInput');
-    console.log('Нажали кнопку');
+    console.log('Нашли элемент с вводом имени');
     if (openMainMenu && errorMsg) {
       openMainMenu.style.display = 'block';
       errorMsg.style.display = 'none';
