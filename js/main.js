@@ -1,7 +1,7 @@
 // 1. Импортируем функцию в освном файле с кодом на кнопки, в переменную, чтобы она работала при клике (через if)
 import { showMainMenu } from './ui/screen-main-menu.js'
 import { openRecipeBook } from './ui/screen-list-recipe.js';
-import { returnMainMenu } from './ui/screen-main-menu.js';
+import { returnMainMenu } from './ui/screen-game-hub.js';
 // потом добавишь: import { showGameHub } from './game-hub.js';
 
 window.gameState = {
