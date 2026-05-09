@@ -1,5 +1,3 @@
-import { openGameHub } from './screen-game-hub.js';
-
 export function showMainMenu() {
   const screen = document.getElementById('screen-main-menu');
   if (screen) {
@@ -15,35 +13,49 @@ export function showMainMenu() {
       </div>
       `;
     screen.style.display = 'block';
+    
     const button = document.getElementById('startGameBtn');
     if (button) {
         button.addEventListener('click', startGame);
     }
   }
 }
+
 // Эта функция обрабатывает нажатие на кнопку "Начать приключение"
 function startGame() {
     const input = document.getElementById('playerNameInput');  
     const errorMsg = document.getElementById('errorMessage');
+    
     if (!input) return;
+    
     const rawName = input.value.trim();
+    
     // Проверка на пустое имя
     if (rawName === '') {
         if (errorMsg) errorMsg.style.display = 'block';
         return;
     }
+    
     // Делаем первую букву заглавной
     const playerName = rawName.charAt(0).toUpperCase() + rawName.slice(1).toLowerCase();
+    
     // Сохраняем имя в глобальный объект
     window.gameState.playerName = playerName;
-    const screen = document.getElementById('screen-main-menu');
-    const headerScreen = document.getElementById('header-game-hub');
-    const footerScreen = document.getElementById('footer-game-hub');
-        // Прячем главное меню
-    if (screen) screen.style.display = 'none';
-    // 
-    if (headerScreen) headerScreen.style.display = 'block';
-    if (footerScreen) footerScreen.style.display = 'block';
-    openGameHub();
+    input.value = ''; // Очищаем текст внутри поля
+    window.gameEvents.emit('switchScreen', 'game-hub');
+    
     alert(`Добро пожаловать в Лавку, ${playerName}!`);
+}
+
+// Прячем главное меню, чтобы перейти на новый экран
+export function hideMainMenu() {
+  const screen = document.getElementById('screen-main-menu');
+  const errorMsg = document.getElementById('errorMessage');
+  const input = document.getElementById('playerNameInput');
+    
+  if (!screen) return;
+    
+  screen.style.display = 'none';
+  if (input) input.value = ''; // Очищаем текст внутри поля
+  if (errorMsg) errorMsg.style.display = 'none';
 }
