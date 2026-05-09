@@ -1,21 +1,39 @@
 // 1. Импортируем функцию в освном файле с кодом на кнопки, в переменную, чтобы она работала при клике (через if)
-import { showMainMenu } from './ui/screen-main-menu.js'
-import { openRecipeBook } from './ui/screen-list-recipe.js';
+import { showMainMenu, hideMainMenu } from './ui/screen-main-menu.js'
+import { showGameHub, hideGameHub } from './ui/screen-game-hub.js';
 
 window.gameState = {
     playerName: ''
 };
 
+//точка приема сигналов на переключение экранов
+window.gameEvents = {
+    emit(eventName, data) {
+        if (eventName === 'switchScreen') {
+            switchScreen(data);
+        }
+    }
+};
+
+const screens = {
+    'main-menu': { show: showMainMenu, hide: hideMainMenu },
+    'game-hub': { show: showGameHub,  hide: hideGameHub }
+}
+
+let currentScreen = null;
+
+function switchScreen(screenId) {
+    if (currentScreen && screens[currentScreen]) {
+        screens[currentScreen].hide();
+    }
+    
+    if (screens[screenId]) {
+        screens[screenId].show();
+        currentScreen = screenId;
+    }
+}
+
 // При загрузке — показать главное меню
 document.addEventListener('DOMContentLoaded', () => {
-    showMainMenu();
+    switchScreen('main-menu')
 });
-
-// 2. Находим кнопки в основном файле. Т.к. этот файл подключен к основному .html и все что мы ищем через этот код, мы ищем сразу в этом файле
-const listBtn = document.getElementById('list-menu');
-const returnBtn = document.getElementById('main-menu-btn');
-
-// 3. Вешаем обработчики, проверяем заполнена ли переменная данными (null или нет). Данный вариант упрощенный и корректный, приравнивается к listBtn !=== null
-if (listBtn) {
-    listBtn.addEventListener('click', openRecipeBook);
-}
