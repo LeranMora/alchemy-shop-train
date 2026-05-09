@@ -1,6 +1,6 @@
 const screenHeader = document.getElementById('header-game-hub');
 const screenFooter = document.getElementById('footer-game-hub');
-export function openGameHub() {
+export function showGameHub() {
   screenHeader.innerHTML = `
   <button id="save-game" class="layout-btn">Сохранить игру</button>
   <button id="load-game" class="layout-btn">Удалить игру</button>
@@ -20,21 +20,15 @@ export function openGameHub() {
   screenFooter.style.display = 'grid';
   const returnBtn = document.getElementById('main-menu-btn');
     if (returnBtn) {
-      returnBtn.addEventListener('click', returnMainMenu);
+      returnBtn.addEventListener('click', () => {
+      window.gameEvents.emit('switchScreen', 'main-menu');
+      })
     }
   }
 
-export function returnMainMenu() {
-  const openMainMenu = document.getElementById('screen-main-menu');
-  const errorMsg = document.getElementById('errorMessage');
-  const playerInput = document.getElementById('playerNameInput');
-    
-  if (!openMainMenu || !errorMsg || !playerInput) return;
-    
-  openMainMenu.style.display = 'block';
-  errorMsg.style.display = 'none';
-  playerInput.value = ''; // Очищаем текст внутри поля
-  screenHeader.style.display = 'none';
-  screenFooter.style.display = 'none';
+export function hideGameHub() {
+    screenHeader.innerHTML = '';
+    screenFooter.innerHTML = '';
+    screenFooter.style.display = 'none';
+    screenHeader.style.display = 'none';
 }
-
